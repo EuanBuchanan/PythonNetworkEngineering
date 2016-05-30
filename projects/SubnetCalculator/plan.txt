@@ -1,0 +1,18 @@
+-Part 1-
+1. Importing the modules
+2. IP address input and validity check
+3. Sunget mask input and validity check
+
+-Part 2-
+4. Converting the mask to binary
+5. Calculating the number of hosts per subnet
+6. Calculating the wildcard mask
+
+-Part 3-
+7. Converting the IP address to binary
+8. Getting the network and broadcast addresses
+9. Printing the results
+
+-Part 4-
+10. Generating a random IP address in the subnet
+

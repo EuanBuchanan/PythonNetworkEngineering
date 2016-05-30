@@ -1,0 +1,103 @@
+digraph G {
+	fontname = "Bitstream Ver Sans"
+	fontsize = 8
+
+	node [
+		fontname = "Bitstream Vera Sans"
+		fontsize = 8
+		shape = "record"
+	]
+
+	edge [
+		fontname = "Bitstream Vera Sans"
+		fontsize = 8
+	]
+
+    Importing [
+
+        label = "{Importing the modules\l}"
+        ]
+
+    IPAddressValidity [
+    
+        label = "{Checking IP address Validity\l}"
+        ]
+
+    SubnetValidity [
+
+        label = "{Checking Subnet Mask validity}"
+        ]
+
+
+    Importing -> IPAddressValidity
+    Importing -> SubnetValidity
+
+    Valid [
+
+    shape = diamond
+
+    label = "Valid"
+    ]
+
+    IPAddressValidity -> Valid
+    SubnetValidity -> Valid
+
+    ConvertMask [
+
+    label = "{Convert mask to binary string\l}"
+    ]
+
+    Valid -> ConvertMask
+    
+
+    CountHostBits  [
+
+    label = "{Counting host bits in the mask and calculating number of hosts/subnet\l}"
+    ]
+
+    ConvertMask -> CountHostBits
+
+    ObtainWildcard [
+
+    label = "{Obtaining the wildcard mask\l}"
+    ]
+
+    CountHostBits -> ObtainWildcard
+
+    ConvertIPtoBinary [
+
+    label = "{Convert IP to binary string\l}"
+    ]
+    
+    ObtainWildcard -> ConvertIPtoBinary
+
+    ObtainNetworkBroadcast [
+
+    label = "{Obtain the network and broadcast addresses from the binary strings\l}"
+    ]
+
+    ConvertIPtoBinary -> ObtainNetworkBroadcast
+
+    GenerateRandomIP [ 
+
+    label = "{Generation of random IP in subnet\l}"
+
+    ]
+
+    ObtainNetworkBroadcast -> GenerateRandomIP
+
+    ObtainAvailableIPAddress [
+
+    label = "{Obtain available IP address in range}"
+    ]
+
+    GenerateRandomIP -> ObtainAvailableIPAddress
+
+    PrintingGenratedIP [
+
+    label = "{Printing the generated IP address\l}"
+    ]
+
+    ObtainAvailableIPAddress -> PrintingGenratedIP
+
+}	
