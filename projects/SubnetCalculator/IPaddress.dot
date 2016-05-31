@@ -1,0 +1,40 @@
+digraph G {
+	fontname = "Bitstream Ver Sans"
+	fontsize = 8
+
+	node [
+		fontname = "Bitstream Vera Sans"
+		fontsize = 8
+		shape = "record"
+	]
+
+	edge [
+		fontname = "Bitstream Vera Sans"
+		fontsize = 8
+	]
+    
+    raw_input [ label = "{Prompt for IP address and format expected}" ]
+    check_octets [ shape = diamond label = "Are there four octets?}" ]
+    error [ label = "Raise appropriate error message" ]
+    reserved_local [ shape = diamond label = "Is first octet '127'?" ]
+    multicast [ shape = diamond label = "Is first octet '224'?" ]
+    windows_default [ shape = diamond label = "Are the first two octets '169.254?" ]
+    valid_octets [ shape = diamond label = "Are octets in valid range?" ]
+    ip_address [ label = "Return valid IP address." ]
+
+    error -> raw_input [ label = "Prompt for new input" ]
+
+    raw_input -> check_octets
+    check_octets -> reserved_local [ label = "Yes" ]
+    reserved_local -> multicast [ label = "Yes" ]
+    multicast -> windows_default [ label = "Yes" ]
+    windows_default -> valid_octets [ label = "Yes" ]
+    check_octets -> error [ label = "No" ]
+    reserved_local -> error [ label = "No" ]
+    multicast -> error [ label = "No" ]
+    windows_default -> error [ label = "No" ]
+    valid_octets -> error [ label = "No" ]
+    valid_octets -> ip_address [ label = "Yes" ]
+
+    
+}
