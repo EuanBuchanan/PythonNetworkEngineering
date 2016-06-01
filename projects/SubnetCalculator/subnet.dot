@@ -1,0 +1,34 @@
+digraph G {
+	fontname = "Bitstream Ver Sans"
+	fontsize = 8
+
+	node [
+		fontname = "Bitstream Vera Sans"
+		fontsize = 8
+		shape = "record"
+	]
+
+	edge [
+		fontname = "Bitstream Vera Sans"
+		fontsize = 8
+	]
+    
+    generate_valid_mask [ label = "{Generate list of valid subnet octet values\l|$valid_octets}" ]
+    generate_valid_mask -> user_input
+    user_input [ label = "{Get raw  input from user\l|$user_subnet\l}" ]
+    split_octets [ label = "{Split $user_subnet in to octets\l|$subnet_octets\l}" ]
+    user_input -> split_octets
+    four_octets [ shape = diamond label = "Are there four octets?" ]
+    error [ label = "{Generate contextual error, return to user_input}" ]
+    split_octets -> four_octets
+    four_octets -> error [ label = "No" ]
+    error -> user_input 
+    check_valid_octets [ shape = diamond  label = "Check that $sbunet_octets are contained in $valid_octets" ]
+    four_octets -> check_valid_octets [ label = "Yes" ]
+    check_valid_octets -> error [ label = "No" ]
+    octet_sizes_valid [ shape = diamond  label = "{Check that $subnet_octet[0] through to [3 do not increase in size}" ]
+    check_valid_octets -> octet_sizes_valid [ label = "Yes" ]
+    octet_sizes_valid -> error [ label = "No" ]
+    return_subnet [ label = "{Return subnet_octets}" ]
+    octet_sizes_valid -> return_subnet [ label = "Yes" ]
+}
