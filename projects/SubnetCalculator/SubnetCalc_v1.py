@@ -61,7 +61,40 @@ def user_input_ip():
             return octets
             break
 
+def subnet_check():
+
+    # We need a list of valid subnet mask octets for later
+    valid_octets = ['0', '128','192','224','240','248','252','254','255' ]
+ 
+    while True:
+
+        user_subnet = raw_input("Please enter subnet: ")
+        subnet_octets = user_subnet.split('.')
+        if len(subnet_octets) != 4:
+            print "Subnet needs to be entered as x.x.x.x, three '.' seperating the four octets."
+
+        elif subnet_octets[0] not in valid_octets or\
+             subnet_octets[1] not in valid_octets or\
+             subnet_octets[2] not in valid_octets or\
+             subnet_octets[3] not in valid_octets:
+            print "One or more octets is not valid. Valid octets are: "
+            for octet in valid_octets:
+                print octet
+            continue
+
+        elif subnet_octets[0] <= subnet_octets[1] <= subnet_octets[2] \
+            <= subnet_octets[3]:
+            print "Each subsequent subnet octet from the first must be equal to or lesser than the previous"
+            continue 
+            
+        else:
+            return subnet_octets
+    
 
 
 ip_address = user_input_ip()
 print ip_address
+
+subnet_octets = subnet_check()
+print subnet_octets
+

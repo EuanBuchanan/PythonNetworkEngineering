@@ -22,10 +22,16 @@ def subnet_check():
             for octet in valid_octets:
                 print octet
             continue
+
+        elif subnet_octets[0] <= subnet_octets[1] <= subnet_octets[2] \
+            <= subnet_octets[3]:
+            print "Each subsequent subnet octet from the first must be equal to or lesser than the previous"
+            continue 
             
         else:
             return subnet_octets
     
 
 
-print subnet_check()
+subnet_octets = subnet_check()
+print subnet_octets
