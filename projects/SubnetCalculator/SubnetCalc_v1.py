@@ -25,7 +25,14 @@ import random
 def user_input_ip():
 
     ''' This function carries out a number of tests to check that the IP is 
-    valid. '''
+    valid.
+    
+    A vadlid IP address has four octets, deliminated by '.'
+    
+    The following addresses are not considered valid:
+        224.x.x.x - multicast addresses
+        127.x.x.x - reserved addresses
+        169.254 - windows default adddresses when no DHCP is found '''
 
     while True:
         user_input = raw_input("Enter an IP address in the form of a.b.c.d: ")
