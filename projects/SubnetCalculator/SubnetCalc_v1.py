@@ -108,6 +108,7 @@ def get_network_broadcast(ip_address, ip_mask):
     ip_broadcast_address = []
     ip_mask_binary = convert_to_binary(ip_mask)
     host_bits = 0
+    hosts = []
 
 
     for octet in range(len(ip_mask)):
@@ -119,6 +120,8 @@ def get_network_broadcast(ip_address, ip_mask):
         # n is the number of zeroes
 
         host_bits += ip_mask_binary[octet].count('0')
+        hosts.append(ip_mask_binary[octet].count('0'))
+        print hosts
 
         # The wildcard mask is the invers of the mask. Each octet is eight bits, therefore the
         # sub of the sum of 256 and the inverse of the mask will give us the mask value.
@@ -151,17 +154,20 @@ def get_network_broadcast(ip_address, ip_mask):
 
     return (ip_network_address, ip_wildcard_mask, ip_broadcast_address, number_of_hosts)
 
+def get_random_address(ip_addr, ip_mask):
+    pass
 
 
 
 
-ip_address = user_input_ip()
-ip_address_binary = convert_to_binary(ip_address)
 
-ip_mask = subnet_check()
-ip_mask_binary = convert_to_binary(ip_mask)
+# ip_address = user_input_ip()
+# ip_address_binary = convert_to_binary(ip_address)
+# 
+# ip_mask = subnet_check()
+# ip_mask_binary = convert_to_binary(ip_mask)
 
 ip_network_address, ip_wildcard_mask, ip_broadcast_address, number_of_hosts \
-        = get_network_broadcast(ip_address, ip_mask)
+        = get_network_broadcast(['192','168','2','21'], ['255','255','255','224']) 
 
-
+ip_random_address = get_random_address(ip_network_address, ip_wildcard_mask)
