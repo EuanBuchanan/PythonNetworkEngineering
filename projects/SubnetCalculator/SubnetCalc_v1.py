@@ -121,7 +121,6 @@ def get_network_broadcast(ip_address, ip_mask):
 
         host_bits += ip_mask_binary[octet].count('0')
         hosts.append(ip_mask_binary[octet].count('0'))
-        print hosts
 
         # The wildcard mask is the invers of the mask. Each octet is eight bits, therefore the
         # sub of the sum of 256 and the inverse of the mask will give us the mask value.
@@ -152,22 +151,44 @@ def get_network_broadcast(ip_address, ip_mask):
     print "The Broadcast Address is: " + ".".join(ip_broadcast_address)
     print "The number of hosts is: " + str(number_of_hosts)
 
-    return (ip_network_address, ip_wildcard_mask, ip_broadcast_address, number_of_hosts)
+    return (ip_network_address, ip_wildcard_mask, ip_broadcast_address, number_of_hosts, hosts)
 
-def get_random_address(ip_addr, ip_mask):
-    pass
+def get_random_address(ip_addr, hosts):
+    while True:
+        generate = raw_input("Generate radom ip address from subnet? (y/n)")
+        
+        if generate == 'y':
+
+            ip_random = []
+            for octet in range(len(ip_addr)):
+                if int(hosts[octet]) == 0:
+                    ip_random.append(ip_addr[octet])
+                else:
+                    ip_random.append(str(int(random.randint(int(ip_addr[octet]),\
+                            int(hosts[octet])))))
+            print 'Random IP address is: ' + '.'.join(ip_random)
+            
+            continue
+        else:
+            print "Ok, bye!\n"
+            break
+        
 
 
 
 
 
-# ip_address = user_input_ip()
-# ip_address_binary = convert_to_binary(ip_address)
-# 
-# ip_mask = subnet_check()
-# ip_mask_binary = convert_to_binary(ip_mask)
 
-ip_network_address, ip_wildcard_mask, ip_broadcast_address, number_of_hosts \
-        = get_network_broadcast(['192','168','2','21'], ['255','255','255','224']) 
+
+ip_address = user_input_ip()
+ip_address_binary = convert_to_binary(ip_address)
+
+ip_mask = subnet_check()
+ip_mask_binary = convert_to_binary(ip_mask)
+
+ip_network_address, ip_wildcard_mask, ip_broadcast_address, number_of_hosts, hosts \
+        = get_network_broadcast(ip_address, ip_mask) 
 
 ip_random_address = get_random_address(ip_network_address, ip_wildcard_mask)
+
+
