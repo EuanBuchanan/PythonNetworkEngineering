@@ -1,5 +1,6 @@
-# A re-write of SubnetCalculator using the NetAddr modle. The logic and the
-# flow will not be altered, just the code.
+# A re-write of SubnetCalculator using the NetAddr module. The logic and the
+# flow will not be altered, just the code. I'm not implmenting the random 
+# addreess function.
 
 #   On taking an IP address and a subnet mask:
 
@@ -15,7 +16,7 @@
 import sys
 import netaddr
 
-def user_input_ip(message):
+def user_input(message):
 
     ''' This function tests that the user input is in the fomr of a dotted decimal
     IPv4 address. '''
@@ -72,44 +73,67 @@ def ip_subnet_check(ip):
         return(check, "Input is not a valid subnet, please try again")
     else:
         check = True
-        return(check)
+        return(check,)
 
-def get_ip_and_mask():
+def get_ip():
 
+    ''' This function gets the host IP, returns netaddr.IPaddress object.'''
     while True:
-        ip_host = user_input_ip("Please enter host IP in the form of a.b.c.d: ")
+        ip_host = user_input("Please enter host IP in the form of a.b.c.d: ")
         check = ip_host_check(ip_host)
-        if not ip_host_check(ip_host)[0]:
+        if not check[0]:
             print check[1]
             continue
         else:
-            print str(ip_host)
+            return(ip_host)
             break
-get_ip_and_mask()
 
+def get_subnet():
 
+    '''This function gets the host subnet, returns netaddr.IPAddress object.'''
+
+    while True:
+        ip_subnet = user_input("Please enter mask in the form of a.b.c.d: ")
+        check = ip_subnet_check(ip_subnet)
+        if not ip_subnet_check(ip_subnet)[0]:
+            print check[1]
+            continue
+        else:
+            return(ip_subnet)
+            break
     
+def main():
+
+    ''' Sets host_ip and host_subnet to netaddr.IPAddress objecta. Uses objects to create
+    netaddr.IPNetwork object, host_network.
+    
+    From host_network:
+
+        Network Address
+        Broadcast Address
+        Number of Valid hosts per subnet
+        Wildcard Mask
+    
+    From host_subnet:
+
+        Mask bits
+
+    are obtained.'''
+
+    host_ip = get_ip()
+    host_subnet = get_subnet()
+    host_network = netaddr.IPNetwork('/'.join([str(host_ip), str(host_subnet.netmask_bits())]))
+    print "The Network Address is: " + str(host_network.network)
+    print "The Broadcast Address is: " + str(host_network.broadcast)
+    print "The hostmask is: " + str(host_network.hostmask)
+    print "The mask bits  are: " + str(host_subnet.bits())
+    if int(host_network.size) == 1:
+        print "The number of hosts is 1."
+    elif int(host_network.size) == 2:
+        print "The number of hosts is 1 with a broadcat address."
+    else:
+        print "The number of hosts is " + str(int(host_network.size) - 2)
 
 
-
-#        if len(octets) != 4:
-#            print "The input needs to be four octets, for example 10.10.10.10, where the '.' seperates each octet."
-#            continue
-#        elif octets[0] == "127":
-#            print "Addresses beginning in '127' are reserved local IPs and not valid."
-#            continue
-#        elif octets[0] == "224":
-#            print "Addresses beginning in '224' are multicast addresses and not valid."
-#            continue
-#        elif octets[0] == "169" and octets[1] == "254":
-#            print "Addresses beginning in '169.254' are Microsoft default addresses and not valid."
-#            continue
-#        elif not (1 <= int(octets[0]) <= 223 \
-#            and 0 <= int(octets[1]) <= 255 \
-#            and 0 <= int(octets[2]) <= 255 \
-#            and 0 <= int(octets[3]) <= 255):
-#            print "One or more octets is out of range. Please check and re-input."
-#            continue
-#        else:
-#            return octets
-#            break
+if __name__ == "__main__":
+    main()

@@ -172,13 +172,6 @@ def get_random_address(ip_addr, hosts):
         else:
             print "Ok, bye!\n"
             break
-        
-
-
-
-
-
-
 
 ip_address = user_input_ip()
 ip_address_binary = convert_to_binary(ip_address)
