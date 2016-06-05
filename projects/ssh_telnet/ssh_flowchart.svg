@@ -17,8 +17,8 @@
 <text text-anchor="middle" x="346" y="-1130.3" font-family="Times,serif" font-size="14.00">Import modules</text>
 </g>
 <!-- source_files -->
-<g id="node2" class="node"><title>source_files</title>
-<polygon fill="none" stroke="black" points="425,-1079 267,-1079 267,-1043 425,-1043 425,-1079"/>
+<g id="node3" class="node"><title>source_files</title>
+<path fill="none" stroke="black" d="M413,-1079C413,-1079 279,-1079 279,-1079 273,-1079 267,-1073 267,-1067 267,-1067 267,-1055 267,-1055 267,-1049 273,-1043 279,-1043 279,-1043 413,-1043 413,-1043 419,-1043 425,-1049 425,-1055 425,-1055 425,-1067 425,-1067 425,-1073 419,-1079 413,-1079"/>
 <text text-anchor="middle" x="346" y="-1057.3" font-family="Times,serif" font-size="14.00">Source configuration files</text>
 </g>
 <!-- import&#45;&gt;source_files -->
@@ -26,9 +26,14 @@
 <path fill="none" stroke="black" d="M346,-1115.81C346,-1107.79 346,-1098.05 346,-1089.07"/>
 <polygon fill="black" stroke="black" points="349.5,-1089.03 346,-1079.03 342.5,-1089.03 349.5,-1089.03"/>
 </g>
+<!-- job_report -->
+<g id="node2" class="node"><title>job_report</title>
+<path fill="none" stroke="black" d="M505.5,-74C505.5,-74 106.5,-74 106.5,-74 100.5,-74 94.5,-68 94.5,-62 94.5,-62 94.5,-50 94.5,-50 94.5,-44 100.5,-38 106.5,-38 106.5,-38 505.5,-38 505.5,-38 511.5,-38 517.5,-44 517.5,-50 517.5,-50 517.5,-62 517.5,-62 517.5,-68 511.5,-74 505.5,-74"/>
+<text text-anchor="middle" x="306" y="-52.3" font-family="Times,serif" font-size="14.00">Report devices connected to, log file locations and devices that had errors.</text>
+</g>
 <!-- source_files_okay -->
-<g id="node3" class="node"><title>source_files_okay</title>
-<polygon fill="none" stroke="black" points="346,-1006 196.355,-988 346,-970 495.645,-988 346,-1006"/>
+<g id="node14" class="node"><title>source_files_okay</title>
+<path fill="none" stroke="black" d="M334.086,-1004.57C334.086,-1004.57 208.269,-989.433 208.269,-989.433 202.312,-988.717 202.312,-987.283 208.269,-986.567 208.269,-986.567 334.086,-971.433 334.086,-971.433 340.043,-970.717 351.957,-970.717 357.914,-971.433 357.914,-971.433 483.731,-986.567 483.731,-986.567 489.688,-987.283 489.688,-988.717 483.731,-989.433 483.731,-989.433 357.914,-1004.57 357.914,-1004.57 351.957,-1005.28 340.043,-1005.28 334.086,-1004.57"/>
 <text text-anchor="middle" x="346" y="-984.3" font-family="Times,serif" font-size="14.00">Check that input files exist</text>
 </g>
 <!-- source_files&#45;&gt;source_files_okay -->
@@ -38,29 +43,12 @@
 </g>
 <!-- check_reachability -->
 <g id="node4" class="node"><title>check_reachability</title>
-<polygon fill="none" stroke="black" points="347,-919 213,-919 213,-883 347,-883 347,-919"/>
+<path fill="none" stroke="black" d="M335,-919C335,-919 225,-919 225,-919 219,-919 213,-913 213,-907 213,-907 213,-895 213,-895 213,-889 219,-883 225,-883 225,-883 335,-883 335,-883 341,-883 347,-889 347,-895 347,-895 347,-907 347,-907 347,-913 341,-919 335,-919"/>
 <text text-anchor="middle" x="280" y="-897.3" font-family="Times,serif" font-size="14.00">Check IP reachability</text>
-</g>
-<!-- source_files_okay&#45;&gt;check_reachability -->
-<g id="edge3" class="edge"><title>source_files_okay&#45;&gt;check_reachability</title>
-<path fill="none" stroke="black" d="M333.895,-971.41C324.313,-959.07 310.739,-941.589 299.611,-927.257"/>
-<polygon fill="black" stroke="black" points="302.288,-924.998 293.391,-919.246 296.759,-929.291 302.288,-924.998"/>
-<text text-anchor="middle" x="327" y="-940.8" font-family="Times,serif" font-size="14.00">Yes</text>
-</g>
-<!-- exit -->
-<g id="node16" class="node"><title>exit</title>
-<polygon fill="none" stroke="black" points="444,-293 266,-293 266,-257 444,-257 444,-293"/>
-<text text-anchor="middle" x="355" y="-271.3" font-family="Times,serif" font-size="14.00">Exit and check configuration.</text>
-</g>
-<!-- source_files_okay&#45;&gt;exit -->
-<g id="edge4" class="edge"><title>source_files_okay&#45;&gt;exit</title>
-<path fill="none" stroke="black" d="M356.571,-971.143C366.552,-954.611 380,-927.589 380,-902 380,-902 380,-902 380,-361 380,-340.874 373.469,-319.116 367.084,-302.652"/>
-<polygon fill="black" stroke="black" points="370.218,-301.072 363.186,-293.147 363.742,-303.728 370.218,-301.072"/>
-<text text-anchor="middle" x="388.5" y="-620.8" font-family="Times,serif" font-size="14.00">No</text>
 </g>
 <!-- report_reachability -->
 <g id="node5" class="node"><title>report_reachability</title>
-<polygon fill="none" stroke="black" points="312.5,-846 187.5,-846 187.5,-810 312.5,-810 312.5,-846"/>
+<path fill="none" stroke="black" d="M300.5,-846C300.5,-846 199.5,-846 199.5,-846 193.5,-846 187.5,-840 187.5,-834 187.5,-834 187.5,-822 187.5,-822 187.5,-816 193.5,-810 199.5,-810 199.5,-810 300.5,-810 300.5,-810 306.5,-810 312.5,-816 312.5,-822 312.5,-822 312.5,-834 312.5,-834 312.5,-840 306.5,-846 300.5,-846"/>
 <text text-anchor="middle" x="250" y="-824.3" font-family="Times,serif" font-size="14.00">Report reachability.</text>
 </g>
 <!-- check_reachability&#45;&gt;report_reachability -->
@@ -69,8 +57,8 @@
 <polygon fill="black" stroke="black" points="264.312,-853.878 257.195,-846.029 257.863,-856.603 264.312,-853.878"/>
 </g>
 <!-- ip_prompt_continue -->
-<g id="node6" class="node"><title>ip_prompt_continue</title>
-<polygon fill="none" stroke="black" points="203,-773 54.193,-755 203,-737 351.807,-755 203,-773"/>
+<g id="node15" class="node"><title>ip_prompt_continue</title>
+<path fill="none" stroke="black" d="M191.087,-771.559C191.087,-771.559 66.1061,-756.441 66.1061,-756.441 60.1496,-755.721 60.1496,-754.279 66.1061,-753.559 66.1061,-753.559 191.087,-738.441 191.087,-738.441 197.043,-737.721 208.957,-737.721 214.913,-738.441 214.913,-738.441 339.894,-753.559 339.894,-753.559 345.85,-754.279 345.85,-755.721 339.894,-756.441 339.894,-756.441 214.913,-771.559 214.913,-771.559 208.957,-772.279 197.043,-772.279 191.087,-771.559"/>
 <text text-anchor="middle" x="203" y="-751.3" font-family="Times,serif" font-size="14.00">Prompt user, continue/quit</text>
 </g>
 <!-- report_reachability&#45;&gt;ip_prompt_continue -->
@@ -79,9 +67,101 @@
 <polygon fill="black" stroke="black" points="222.067,-778.462 213.628,-772.056 216.23,-782.326 222.067,-778.462"/>
 </g>
 <!-- build_threading -->
-<g id="node8" class="node"><title>build_threading</title>
-<polygon fill="none" stroke="black" points="251.5,-686 150.5,-686 150.5,-650 251.5,-650 251.5,-686"/>
+<g id="node6" class="node"><title>build_threading</title>
+<path fill="none" stroke="black" d="M239.5,-686C239.5,-686 162.5,-686 162.5,-686 156.5,-686 150.5,-680 150.5,-674 150.5,-674 150.5,-662 150.5,-662 150.5,-656 156.5,-650 162.5,-650 162.5,-650 239.5,-650 239.5,-650 245.5,-650 251.5,-656 251.5,-662 251.5,-662 251.5,-674 251.5,-674 251.5,-680 245.5,-686 239.5,-686"/>
 <text text-anchor="middle" x="201" y="-664.3" font-family="Times,serif" font-size="14.00">Build threading</text>
+</g>
+<!-- ssh_connection -->
+<g id="node7" class="node"><title>ssh_connection</title>
+<path fill="none" stroke="black" d="M251,-599C251,-599 137,-599 137,-599 131,-599 125,-593 125,-587 125,-587 125,-575 125,-575 125,-569 131,-563 137,-563 137,-563 251,-563 251,-563 257,-563 263,-569 263,-575 263,-575 263,-587 263,-587 263,-593 257,-599 251,-599"/>
+<text text-anchor="middle" x="194" y="-577.3" font-family="Times,serif" font-size="14.00">Build SSH connection</text>
+</g>
+<!-- build_threading&#45;&gt;ssh_connection -->
+<g id="edge9" class="edge"><title>build_threading&#45;&gt;ssh_connection</title>
+<path fill="none" stroke="black" d="M199.583,-649.799C198.625,-638.163 197.339,-622.548 196.243,-609.237"/>
+<polygon fill="black" stroke="black" points="199.723,-608.854 195.414,-599.175 192.747,-609.429 199.723,-608.854"/>
+</g>
+<!-- check_authentication -->
+<g id="node8" class="node"><title>check_authentication</title>
+<path fill="none" stroke="black" d="M279,-526C279,-526 87,-526 87,-526 81,-526 75,-520 75,-514 75,-514 75,-502 75,-502 75,-496 81,-490 87,-490 87,-490 279,-490 279,-490 285,-490 291,-496 291,-502 291,-502 291,-514 291,-514 291,-520 285,-526 279,-526"/>
+<text text-anchor="middle" x="183" y="-504.3" font-family="Times,serif" font-size="14.00">Check authentication on each device</text>
+</g>
+<!-- ssh_connection&#45;&gt;check_authentication -->
+<g id="edge10" class="edge"><title>ssh_connection&#45;&gt;check_authentication</title>
+<path fill="none" stroke="black" d="M191.337,-562.813C190.094,-554.789 188.585,-545.047 187.194,-536.069"/>
+<polygon fill="black" stroke="black" points="190.628,-535.375 185.638,-526.029 183.711,-536.447 190.628,-535.375"/>
+</g>
+<!-- authentication_report -->
+<g id="node9" class="node"><title>authentication_report</title>
+<path fill="none" stroke="black" d="M243,-453C243,-453 99,-453 99,-453 93,-453 87,-447 87,-441 87,-441 87,-429 87,-429 87,-423 93,-417 99,-417 99,-417 243,-417 243,-417 249,-417 255,-423 255,-429 255,-429 255,-441 255,-441 255,-447 249,-453 243,-453"/>
+<text text-anchor="middle" x="171" y="-431.3" font-family="Times,serif" font-size="14.00">Report authentication status</text>
+</g>
+<!-- check_authentication&#45;&gt;authentication_report -->
+<g id="edge11" class="edge"><title>check_authentication&#45;&gt;authentication_report</title>
+<path fill="none" stroke="black" d="M180.095,-489.813C178.739,-481.789 177.093,-472.047 175.575,-463.069"/>
+<polygon fill="black" stroke="black" points="178.996,-462.306 173.878,-453.029 172.094,-463.472 178.996,-462.306"/>
+</g>
+<!-- auth_prompt_continue -->
+<g id="node16" class="node"><title>auth_prompt_continue</title>
+<path fill="none" stroke="black" d="M140.087,-378.559C140.087,-378.559 15.1061,-363.441 15.1061,-363.441 9.14957,-362.721 9.14957,-361.279 15.1061,-360.559 15.1061,-360.559 140.087,-345.441 140.087,-345.441 146.043,-344.721 157.957,-344.721 163.913,-345.441 163.913,-345.441 288.894,-360.559 288.894,-360.559 294.85,-361.279 294.85,-362.721 288.894,-363.441 288.894,-363.441 163.913,-378.559 163.913,-378.559 157.957,-379.279 146.043,-379.279 140.087,-378.559"/>
+<text text-anchor="middle" x="152" y="-358.3" font-family="Times,serif" font-size="14.00">Prompt user, continue/quit</text>
+</g>
+<!-- authentication_report&#45;&gt;auth_prompt_continue -->
+<g id="edge12" class="edge"><title>authentication_report&#45;&gt;auth_prompt_continue</title>
+<path fill="none" stroke="black" d="M166.401,-416.813C164.198,-408.583 161.512,-398.545 159.059,-389.378"/>
+<polygon fill="black" stroke="black" points="162.392,-388.295 156.426,-379.54 155.63,-390.105 162.392,-388.295"/>
+</g>
+<!-- send_device_commands -->
+<g id="node10" class="node"><title>send_device_commands</title>
+<path fill="none" stroke="black" d="M236,-293C236,-293 12,-293 12,-293 6,-293 1.42109e-14,-287 1.42109e-14,-281 1.42109e-14,-281 1.42109e-14,-269 1.42109e-14,-269 1.42109e-14,-263 6,-257 12,-257 12,-257 236,-257 236,-257 242,-257 248,-263 248,-269 248,-269 248,-281 248,-281 248,-287 242,-293 236,-293"/>
+<text text-anchor="middle" x="124" y="-271.3" font-family="Times,serif" font-size="14.00">Send device specific commands or default</text>
+</g>
+<!-- record_device_output -->
+<g id="node11" class="node"><title>record_device_output</title>
+<path fill="none" stroke="black" d="M282.5,-220C282.5,-220 157.5,-220 157.5,-220 151.5,-220 145.5,-214 145.5,-208 145.5,-208 145.5,-196 145.5,-196 145.5,-190 151.5,-184 157.5,-184 157.5,-184 282.5,-184 282.5,-184 288.5,-184 294.5,-190 294.5,-196 294.5,-196 294.5,-208 294.5,-208 294.5,-214 288.5,-220 282.5,-220"/>
+<text text-anchor="middle" x="220" y="-198.3" font-family="Times,serif" font-size="14.00">Log what has been done</text>
+</g>
+<!-- send_device_commands&#45;&gt;record_device_output -->
+<g id="edge15" class="edge"><title>send_device_commands&#45;&gt;record_device_output</title>
+<path fill="none" stroke="black" d="M147.239,-256.813C159.738,-247.569 175.322,-236.043 188.858,-226.032"/>
+<polygon fill="black" stroke="black" points="191.016,-228.789 196.975,-220.029 186.854,-223.161 191.016,-228.789"/>
+</g>
+<!-- parse_device_command_error -->
+<g id="node12" class="node"><title>parse_device_command_error</title>
+<path fill="none" stroke="black" d="M292,-147C292,-147 182,-147 182,-147 176,-147 170,-141 170,-135 170,-135 170,-123 170,-123 170,-117 176,-111 182,-111 182,-111 292,-111 292,-111 298,-111 304,-117 304,-123 304,-123 304,-135 304,-135 304,-141 298,-147 292,-147"/>
+<text text-anchor="middle" x="237" y="-125.3" font-family="Times,serif" font-size="14.00">Log errors per device</text>
+</g>
+<!-- record_device_output&#45;&gt;parse_device_command_error -->
+<g id="edge16" class="edge"><title>record_device_output&#45;&gt;parse_device_command_error</title>
+<path fill="none" stroke="black" d="M224.115,-183.813C226.057,-175.702 228.42,-165.836 230.589,-156.777"/>
+<polygon fill="black" stroke="black" points="233.998,-157.569 232.923,-147.029 227.19,-155.939 233.998,-157.569"/>
+</g>
+<!-- parse_device_command_error&#45;&gt;job_report -->
+<g id="edge17" class="edge"><title>parse_device_command_error&#45;&gt;job_report</title>
+<path fill="none" stroke="black" d="M253.703,-110.813C262.263,-102.005 272.836,-91.125 282.231,-81.4584"/>
+<polygon fill="black" stroke="black" points="284.991,-83.6395 289.451,-74.0288 279.971,-78.7609 284.991,-83.6395"/>
+</g>
+<!-- exit -->
+<g id="node13" class="node"><title>exit</title>
+<path fill="none" stroke="black" d="M432,-293C432,-293 278,-293 278,-293 272,-293 266,-287 266,-281 266,-281 266,-269 266,-269 266,-263 272,-257 278,-257 278,-257 432,-257 432,-257 438,-257 444,-263 444,-269 444,-269 444,-281 444,-281 444,-287 438,-293 432,-293"/>
+<text text-anchor="middle" x="355" y="-271.3" font-family="Times,serif" font-size="14.00">Exit and check configuration.</text>
+</g>
+<!-- exit&#45;&gt;job_report -->
+<g id="edge18" class="edge"><title>exit&#45;&gt;job_report</title>
+<path fill="none" stroke="black" d="M351.155,-256.972C342.696,-219.511 322.411,-129.676 312.156,-84.2642"/>
+<polygon fill="black" stroke="black" points="315.512,-83.2323 309.895,-74.2488 308.684,-84.7741 315.512,-83.2323"/>
+</g>
+<!-- source_files_okay&#45;&gt;check_reachability -->
+<g id="edge3" class="edge"><title>source_files_okay&#45;&gt;check_reachability</title>
+<path fill="none" stroke="black" d="M333.895,-971.41C324.313,-959.07 310.739,-941.589 299.611,-927.257"/>
+<polygon fill="black" stroke="black" points="302.288,-924.998 293.391,-919.246 296.759,-929.291 302.288,-924.998"/>
+<text text-anchor="middle" x="327" y="-940.8" font-family="Times,serif" font-size="14.00">Yes</text>
+</g>
+<!-- source_files_okay&#45;&gt;exit -->
+<g id="edge4" class="edge"><title>source_files_okay&#45;&gt;exit</title>
+<path fill="none" stroke="black" d="M356.571,-971.143C366.552,-954.611 380,-927.589 380,-902 380,-902 380,-902 380,-361 380,-340.874 373.469,-319.116 367.084,-302.652"/>
+<polygon fill="black" stroke="black" points="370.218,-301.072 363.186,-293.147 363.742,-303.728 370.218,-301.072"/>
+<text text-anchor="middle" x="388.5" y="-620.8" font-family="Times,serif" font-size="14.00">No</text>
 </g>
 <!-- ip_prompt_continue&#45;&gt;build_threading -->
 <g id="edge7" class="edge"><title>ip_prompt_continue&#45;&gt;build_threading</title>
@@ -95,16 +175,6 @@
 <polygon fill="black" stroke="black" points="345.778,-303.684 346.487,-293.113 339.341,-300.935 345.778,-303.684"/>
 <text text-anchor="middle" x="340.5" y="-504.3" font-family="Times,serif" font-size="14.00">Exit</text>
 </g>
-<!-- auth_prompt_continue -->
-<g id="node7" class="node"><title>auth_prompt_continue</title>
-<polygon fill="none" stroke="black" points="152,-380 3.19299,-362 152,-344 300.807,-362 152,-380"/>
-<text text-anchor="middle" x="152" y="-358.3" font-family="Times,serif" font-size="14.00">Prompt user, continue/quit</text>
-</g>
-<!-- send_device_commands -->
-<g id="node12" class="node"><title>send_device_commands</title>
-<polygon fill="none" stroke="black" points="248,-293 1.42109e-14,-293 1.42109e-14,-257 248,-257 248,-293"/>
-<text text-anchor="middle" x="124" y="-271.3" font-family="Times,serif" font-size="14.00">Send device specific commands or default</text>
-</g>
 <!-- auth_prompt_continue&#45;&gt;send_device_commands -->
 <g id="edge13" class="edge"><title>auth_prompt_continue&#45;&gt;send_device_commands</title>
 <path fill="none" stroke="black" d="M146.601,-344.611C142.726,-332.848 137.416,-316.727 132.916,-303.067"/>
@@ -116,76 +186,6 @@
 <path fill="none" stroke="black" d="M183.719,-347.719C216.101,-334.16 266.848,-312.911 304.712,-297.056"/>
 <polygon fill="black" stroke="black" points="306.17,-300.241 314.042,-293.15 303.466,-293.784 306.17,-300.241"/>
 <text text-anchor="middle" x="277.5" y="-314.8" font-family="Times,serif" font-size="14.00">Exit</text>
-</g>
-<!-- ssh_connection -->
-<g id="node9" class="node"><title>ssh_connection</title>
-<polygon fill="none" stroke="black" points="263,-599 125,-599 125,-563 263,-563 263,-599"/>
-<text text-anchor="middle" x="194" y="-577.3" font-family="Times,serif" font-size="14.00">Build SSH connection</text>
-</g>
-<!-- build_threading&#45;&gt;ssh_connection -->
-<g id="edge9" class="edge"><title>build_threading&#45;&gt;ssh_connection</title>
-<path fill="none" stroke="black" d="M199.583,-649.799C198.625,-638.163 197.339,-622.548 196.243,-609.237"/>
-<polygon fill="black" stroke="black" points="199.723,-608.854 195.414,-599.175 192.747,-609.429 199.723,-608.854"/>
-</g>
-<!-- check_authentication -->
-<g id="node10" class="node"><title>check_authentication</title>
-<polygon fill="none" stroke="black" points="291,-526 75,-526 75,-490 291,-490 291,-526"/>
-<text text-anchor="middle" x="183" y="-504.3" font-family="Times,serif" font-size="14.00">Check authentication on each device</text>
-</g>
-<!-- ssh_connection&#45;&gt;check_authentication -->
-<g id="edge10" class="edge"><title>ssh_connection&#45;&gt;check_authentication</title>
-<path fill="none" stroke="black" d="M191.337,-562.813C190.094,-554.789 188.585,-545.047 187.194,-536.069"/>
-<polygon fill="black" stroke="black" points="190.628,-535.375 185.638,-526.029 183.711,-536.447 190.628,-535.375"/>
-</g>
-<!-- authentication_report -->
-<g id="node11" class="node"><title>authentication_report</title>
-<polygon fill="none" stroke="black" points="255,-453 87,-453 87,-417 255,-417 255,-453"/>
-<text text-anchor="middle" x="171" y="-431.3" font-family="Times,serif" font-size="14.00">Report authentication status</text>
-</g>
-<!-- check_authentication&#45;&gt;authentication_report -->
-<g id="edge11" class="edge"><title>check_authentication&#45;&gt;authentication_report</title>
-<path fill="none" stroke="black" d="M180.095,-489.813C178.739,-481.789 177.093,-472.047 175.575,-463.069"/>
-<polygon fill="black" stroke="black" points="178.996,-462.306 173.878,-453.029 172.094,-463.472 178.996,-462.306"/>
-</g>
-<!-- authentication_report&#45;&gt;auth_prompt_continue -->
-<g id="edge12" class="edge"><title>authentication_report&#45;&gt;auth_prompt_continue</title>
-<path fill="none" stroke="black" d="M166.401,-416.813C164.198,-408.583 161.512,-398.545 159.059,-389.378"/>
-<polygon fill="black" stroke="black" points="162.392,-388.295 156.426,-379.54 155.63,-390.105 162.392,-388.295"/>
-</g>
-<!-- record_device_output -->
-<g id="node13" class="node"><title>record_device_output</title>
-<polygon fill="none" stroke="black" points="294.5,-220 145.5,-220 145.5,-184 294.5,-184 294.5,-220"/>
-<text text-anchor="middle" x="220" y="-198.3" font-family="Times,serif" font-size="14.00">Log what has been done</text>
-</g>
-<!-- send_device_commands&#45;&gt;record_device_output -->
-<g id="edge15" class="edge"><title>send_device_commands&#45;&gt;record_device_output</title>
-<path fill="none" stroke="black" d="M147.239,-256.813C159.738,-247.569 175.322,-236.043 188.858,-226.032"/>
-<polygon fill="black" stroke="black" points="191.016,-228.789 196.975,-220.029 186.854,-223.161 191.016,-228.789"/>
-</g>
-<!-- parse_device_command_error -->
-<g id="node14" class="node"><title>parse_device_command_error</title>
-<polygon fill="none" stroke="black" points="304,-147 170,-147 170,-111 304,-111 304,-147"/>
-<text text-anchor="middle" x="237" y="-125.3" font-family="Times,serif" font-size="14.00">Log errors per device</text>
-</g>
-<!-- record_device_output&#45;&gt;parse_device_command_error -->
-<g id="edge16" class="edge"><title>record_device_output&#45;&gt;parse_device_command_error</title>
-<path fill="none" stroke="black" d="M224.115,-183.813C226.057,-175.702 228.42,-165.836 230.589,-156.777"/>
-<polygon fill="black" stroke="black" points="233.998,-157.569 232.923,-147.029 227.19,-155.939 233.998,-157.569"/>
-</g>
-<!-- job_report -->
-<g id="node15" class="node"><title>job_report</title>
-<path fill="none" stroke="black" d="M505.5,-74C505.5,-74 106.5,-74 106.5,-74 100.5,-74 94.5,-68 94.5,-62 94.5,-62 94.5,-50 94.5,-50 94.5,-44 100.5,-38 106.5,-38 106.5,-38 505.5,-38 505.5,-38 511.5,-38 517.5,-44 517.5,-50 517.5,-50 517.5,-62 517.5,-62 517.5,-68 511.5,-74 505.5,-74"/>
-<text text-anchor="middle" x="306" y="-52.3" font-family="Times,serif" font-size="14.00">Report devices connected to, log file locations and devices that had errors.</text>
-</g>
-<!-- parse_device_command_error&#45;&gt;job_report -->
-<g id="edge17" class="edge"><title>parse_device_command_error&#45;&gt;job_report</title>
-<path fill="none" stroke="black" d="M253.703,-110.813C262.263,-102.005 272.836,-91.125 282.231,-81.4584"/>
-<polygon fill="black" stroke="black" points="284.991,-83.6395 289.451,-74.0288 279.971,-78.7609 284.991,-83.6395"/>
-</g>
-<!-- exit&#45;&gt;job_report -->
-<g id="edge18" class="edge"><title>exit&#45;&gt;job_report</title>
-<path fill="none" stroke="black" d="M351.155,-256.972C342.696,-219.511 322.411,-129.676 312.156,-84.2642"/>
-<polygon fill="black" stroke="black" points="315.512,-83.2323 309.895,-74.2488 308.684,-84.7741 315.512,-83.2323"/>
 </g>
 </g>
 </svg>
