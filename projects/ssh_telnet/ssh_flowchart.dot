@@ -1,0 +1,41 @@
+digraph {
+label = "SSH application flow diagram\nThe purpose of the program is to send files containing device commands as a batch"
+import  [ shape = "box", style = "rounded" label = "Import modules" ];
+source_files  [  shape = "box" label = "Source configuration files" ]
+source_files_okay [ shape = "diamond" label = "Check that input files exist" ]
+check_reachability  [ shape = "box" label = "Check IP reachability" ]
+report_reachability [ shape = "box" label = "Report reachability." ]
+ip_prompt_continue [ shape = "diamond" label = "Prompt user, continue/quit" ]
+auth_prompt_continue [ shape = "diamond" label = "Prompt user, continue/quit" ]
+build_threading [ shape = "box" label = "Build threading"]
+ssh_connection  [ shape = "box" label = "Build SSH connection" ]
+check_authentication  [ shape = "box" label = "Check authentication on each device" ]
+authentication_report [ shape = "box" label = "Report authentication status" ]
+send_device_commands  [ shape = "box" label = "Send device specific commands or default" ]
+record_device_output [ shape = "box" label = "Log what has been done" ]
+parse_device_command_error [ shape = "box" label = "Log errors per device" ]
+job_report [ shape = "box", style = "rounded" label = "Report devices connected to, log file locations and devices that had errors." ]
+exit [ shape = "box" label = "Exit and check configuration." ]
+
+
+
+
+import -> source_files
+source_files -> source_files_okay
+source_files_okay -> check_reachability [ label = "Yes" ]
+source_files_okay -> exit [ label = "No" ]
+check_reachability -> report_reachability
+report_reachability -> ip_prompt_continue
+ip_prompt_continue -> build_threading [ label = "Continue" ]
+ip_prompt_continue -> exit [ label = "Exit" ] 
+build_threading -> ssh_connection
+ssh_connection -> check_authentication
+check_authentication -> authentication_report
+authentication_report -> auth_prompt_continue
+auth_prompt_continue -> send_device_commands [ label = "Continue" ]
+auth_prompt_continue -> exit [ label = "Exit" ] 
+send_device_commands -> record_device_output
+record_device_output -> parse_device_command_error
+parse_device_command_error -> job_report
+exit -> job_report
+}
